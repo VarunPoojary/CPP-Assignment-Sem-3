@@ -1,50 +1,45 @@
-  //Password Problem
-
     #include<iostream>
     using namespace std;
     int main()
     {
-        int r,c;
-        cout<<"Enter Number of Rows and Col ";
-        cin>>r>>c;
-        int a[r][c];
-        for(int i=0;i<r;i++)
+        char s[]={'1','3','a','s','t','i'};
+        int count=0;
+        for(int i=0;i<6;i++)
         {
-            for(int j=0;j<c;j++)
-            {
-                cin>>a[i][j];
+            for(int j=0;j<6;j++)
+            {  
+                if(j!=i)
+                {
+                    for(int k=0;k<6;k++)
+                    {
+                        if(k!=i && k!=j)
+                        {
+                            for(int l=0;l<6;l++)
+                            {
+                                if(l!=i && l!=j && l!=k)
+                                {
+                                  cout<<s[i]<<s[j]<<s[k]<<s[l]<<endl; 
+                                  count++;
+                                }
+                                else
+                                {
+                                    continue;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            continue;
+                        }
+      
+                    }
+                }
+                else
+                {
+                    continue;
+                }
             }
         }
-        
-        for(int i=0;i<r;i++)
-        {
-            int min=a[i][0],index=0;
-            bool ans=true;
-            
-            for(int j=1;j<c;j++)
-            {
-                if(a[i][j]<min)
-                {
-                    min=a[i][j];
-                    index=j;
-                }
-                
-            }
-            
-            for(int j=0;j<r;j++)
-            {
-                if(a[j][index]>min)
-                {
-                    ans=false;
-                    break;
-                }
-            }
-            
-            if(ans)
-            cout<<a[i][index];
-            else
-            continue;
-            
-        }
+        cout<<"Total Number of Possible Passwords without repetition are "<<count;
         return 0;
     }
