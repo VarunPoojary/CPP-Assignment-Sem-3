@@ -69,6 +69,7 @@ int main()
     password obj;
     obj.pass();
     return 0;
+ 
 }
 
 
