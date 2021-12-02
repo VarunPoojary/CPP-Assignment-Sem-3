@@ -1,3 +1,10 @@
+/*
+Write a C++ program to realize polynomial equation and perform operations. Write the following functions:
+1. To input and output polynomials
+2. To add two polynomials
+3. To multiply two polynomials
+*/
+
 #include<iostream>
 #include<cmath>
 using namespace std;
@@ -11,7 +18,8 @@ class poly{
     public:
         polynomial poly_array[100];
         int total_terms;
-        poly(){
+        poly()
+        {
             total_terms = 0;
         }
         void accept();
