@@ -12,8 +12,8 @@ class matrix
 
 public:
     int a[s][s],x,y;
-	void get_matrix();
-	void Check_Upper();
+    void get_matrix();
+    void Check_Upper();
     void Sum_Diagonals();
     void Transpose();
 };
@@ -22,12 +22,12 @@ void matrix :: get_matrix()
 {
     cout << "Enter Order Of Matrix A : "<<endl;
     cin >> x >> y;
-	for (int i = 0; i < x; i++) 
+    for (int i = 0; i < x; i++) 
 	{
-		for (int j = 0; j < y; j++) 
-		{
-			cin >> a[i][j];
-		}
+	  for (int j = 0; j < y; j++) 
+	  {
+	    cin >> a[i][j];
+	  }
 	}
     cout<<endl;
 }
@@ -37,20 +37,21 @@ void matrix :: Check_Upper()
 {
     if(x == y)
     {
-		for(int i=1;i<x;i++)
-		{
-			for(int j=0;j<i;j++)
-			{
-				if(a[i][j] != 0)
-				{
-					cout<<"\nNot An Upper Triangular Matrix!\n";
-					return;
+	for(int i=1;i<x;i++)
+	{
+	   for(int j=0;j<i;j++)
+	   {
+	     if(a[i][j] != 0)
+	     {
+	       cout<<"\nNot An Upper Triangular Matrix!\n";
+	       return;
 				}
-			}
-		}
-		cout<<"\nIt Is An Upper Triangular Matrix!\n";
+	      }
+	    }
+	  cout<<"\nIt Is An Upper Triangular Matrix!\n";
 	}
-	else{
+	else
+	{
 		cout<<"\nThe Dimensions Are Not Equal!\n";
 	}
 }
@@ -101,19 +102,19 @@ int main()
 		case '1':
 			cout << "\n~Check For Upper Triangular~\n";
 			obj.get_matrix();
-            obj.Check_Upper();
+            		obj.Check_Upper();
 			break;
 
 		case '2':
 			cout << "\n~Summation Of Diagonals~\n";
 			obj.get_matrix();
-            obj.Sum_Diagonals();
+           		obj.Sum_Diagonals();
 			break;
 
 		case '3':
 			cout << "\n~Transpose~\n";
 			obj.get_matrix();
-            obj.Transpose();
+            		obj.Transpose();
 			break;
 
 		default:
