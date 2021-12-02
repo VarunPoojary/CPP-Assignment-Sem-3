@@ -1,3 +1,8 @@
+/*Write C++ program for storing matrix. Write functions for 
+i. Check whether given matrix is upper triangular or not
+ii. Compute summation of diagonal elements
+iii. Compute transpose of matrix */
+
 #include<iostream>
 using namespace std;
 #define s 20
