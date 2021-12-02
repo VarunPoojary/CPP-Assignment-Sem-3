@@ -1,3 +1,7 @@
+/*
+ Write a modular program using object oriented programming features to implement different
+ searching methods.(Binary Search, Sequential Search)
+*/
 #include <iostream>
 using namespace std;
 # define size 10
