@@ -9,7 +9,6 @@ using namespace std;
 
 class matrix 
 {
-
 public:
     int a[s][s],x,y;
     void get_matrix();
@@ -18,7 +17,7 @@ public:
     void Transpose();
 };
 
-void matrix :: get_matrix()
+void matrix :: get_matrix()                                     // Function to accept Elements of array from user
 {
     cout << "Enter Order Of Matrix A : "<<endl;
     cin >> x >> y;
@@ -33,7 +32,7 @@ void matrix :: get_matrix()
 }
 
 
-void matrix :: Check_Upper()
+void matrix :: Check_Upper()                                           //FUnction to check if matrix is Upper triangle or not
 {
     if(x == y)
     {
@@ -56,7 +55,7 @@ void matrix :: Check_Upper()
 	}
 }
 
-void matrix :: Sum_Diagonals()
+void matrix :: Sum_Diagonals()                                              //FUnction to calvulate the sum of Diagonal
 {
     int sum =0;
 	if(x==y)
@@ -79,7 +78,7 @@ void matrix :: Sum_Diagonals()
 	}
 }
 
-void matrix :: Transpose()
+void matrix :: Transpose()                                                 //Function to find the Transpose of the matrix
 {
     cout<<"\nTranspose Of The Given Matrix : \n"<<endl;
     for(int i=0;i<x;i++)
@@ -98,7 +97,8 @@ int main()
 	matrix obj;
 		cout << "\nSelect Option :\n1.Check For Upper Triangular\n2.Summation Of Diagonals\n3.Transpose\nEnter Your Choice:";
 		cin >> op;
-		switch (op) {
+		switch (op)                                                          //Menu Driven switch case to accept choice from the user
+		{ 
 		case '1':
 			cout << "\n~Check For Upper Triangular~\n";
 			obj.get_matrix();
