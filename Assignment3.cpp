@@ -23,17 +23,17 @@ void password::pass()
 {
     char s[]={'1','3','a','s','t','i'};
         int count=0;
-        for(int i=0;i<6;i++)
+        for(int i=0;i<6;i++)                                                    //for loop to iterate for the 1st digit
         {
-            for(int j=0;j<6;j++)
+            for(int j=0;j<6;j++)                                                //for loop to iterate for the 2nd digit
             {  
                 if(j!=i)
                 {
-                    for(int k=0;k<6;k++)
+                    for(int k=0;k<6;k++)                                        //for loop to iterate for the 3rd digit
                     {
                         if(k!=i && k!=j)
                         {
-                            for(int l=0;l<6;l++)
+                            for(int l=0;l<6;l++)                                //for loop to iterate for the 4th digit
                             {
                                 if(l!=i && l!=j && l!=k)
                                 {
@@ -59,7 +59,7 @@ void password::pass()
                 }
             }
         }
-        cout<<"Total Number of Possible Passwords without repetition are "<<count;
+        cout<<"Total Number of Possible Passwords without repetition are "<<count;              //print the total number of combinations
 }
 
 
@@ -69,9 +69,7 @@ int main()
     password obj;
     obj.pass();
     return 0;
- 
 }
-
 
 
 
