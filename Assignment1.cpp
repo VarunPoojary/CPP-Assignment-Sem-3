@@ -1,9 +1,6 @@
 /*Write program in C++ to perform matrix operaions like add_matrix(), sub_matrix(), multi_mutrix() using appropriate data sturucture. 
 Also write how to determine time complexity and space compleity of your program. */
 
-
-
-
 #include<iostream>
 using namespace std;
 #define s 20
@@ -21,7 +18,7 @@ class matrix
 
 void matrix::getMatrix()
 {
-    cout<<"\nEnter number of rows and columns of matrix a:";
+    cout<<"\nEnter number of rows and columns of matrix a:";         //for loops to Input the elements of the array a
     cin>>r1>>c1;
     for(int i=0;i<r1;i++)
     {
@@ -31,7 +28,7 @@ void matrix::getMatrix()
         }
     }
     
-    cout<<"\nEnter number of rows and columns of matrix b:";
+    cout<<"\nEnter number of rows and columns of matrix b:";         //for loops to Input the elements of the array b
     cin>>r2>>c2;
     for(int i=0;i<r2;i++)
     {
@@ -44,7 +41,7 @@ void matrix::getMatrix()
 }
 
 
-void matrix::display()
+void matrix::display()                        //function to display the Resultant Matrix
 {
     cout<<"Resultant Matrix is: "<<endl;
     for(int i=0;i<rr;i++)
@@ -58,7 +55,7 @@ void matrix::display()
 }
 
 
-void matrix::add_matrix()
+void matrix::add_matrix()                        //function to ADD matrix A AND b
 {
     rr=r1;
     cr=c1;
@@ -82,7 +79,7 @@ void matrix::add_matrix()
 
 
 
-void matrix::sub_matrix()
+void matrix::sub_matrix()                        //function to Subtract matrix a and b
 {
     rr=r1;
     cr=c1;
@@ -105,7 +102,7 @@ void matrix::sub_matrix()
 }
 
 
-void matrix::multi_matrix()
+void matrix::multi_matrix()                        //function to multiply matrix a and b
 {
     if(r1 != c2 && c1 != r2){
         cout<<"\nMatrix Multiplication Not Possible!\n";
@@ -137,7 +134,7 @@ int main()
     cout<<"Press 1 for addition"<<endl<<"Press 2 for subtraction"<<endl<<"Press 3 for Multiplication"<<endl;
     cin>>n;
     
-    switch(n)
+    switch(n)                                 //Menu driven switch case to take Choice from user
     {
         case '1':
         obj.getMatrix();
