@@ -18,7 +18,7 @@ class saddle
 
 
 
-void saddle::get_matrix()
+void saddle::get_matrix()                              //function to accept Elements of array from user
 {
     cout<<"\nEnter Array Dimensions : ";
     cin>>r>>c;
@@ -32,7 +32,7 @@ void saddle::get_matrix()
 	}
 }
 
-void saddle::saddle_point()
+void saddle::saddle_point()                             // function to find the saddle_point in the array
     {
         cout<<"\nSaddle Points are ";
          for(int i=0;i<r;i++)
@@ -44,7 +44,7 @@ void saddle::saddle_point()
                 bool min_ans=true;
                 bool max_ans=true;
             
-                for(int j=1;j<c;j++)
+                for(int j=1;j<c;j++)                    // for loop to find the smallest and greatest element in the row
                     {
                         if(a[i][j]<min)
                         {
@@ -60,7 +60,7 @@ void saddle::saddle_point()
                     }   
             
             
-                for(int j=0;j<r;j++)
+                for(int j=0;j<r;j++)                    // for loop to check if min and max in row is the greatest and smallest in collumn
                     {
                         if(a[j][min_index]>min)
                         {
@@ -78,7 +78,7 @@ void saddle::saddle_point()
                         }
                     }
             
-                    if(min_ans)
+                    if(min_ans)                               //if element smallest in row and greatest in collumn or vice versa then print
                     cout<<a[i][min_index]<<" ";
                     else if(max_ans)
                     cout<<a[i][max_index]<<" ";
@@ -87,8 +87,7 @@ void saddle::saddle_point()
             
             }
     }
-
-
+    
 int main()
 {
     saddle obj;
