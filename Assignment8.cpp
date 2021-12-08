@@ -4,6 +4,8 @@ Operands and operator, both must be single character.
 Input Postfix expression must be in a desired format.
 Only '+', '-', '*' and '/ ' operators are expected.
 */
+
+
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -30,7 +32,7 @@ class infix_to_postfix
 };
 
 
-void infix_to_postfix::push(char o)
+void infix_to_postfix::push(char o)                             //to add operator in the stack
 {
     if(top == size-1)
     cout<<"Stack is full"<<endl;
@@ -42,7 +44,7 @@ void infix_to_postfix::push(char o)
 }
 
 
-char infix_to_postfix::pop()
+char infix_to_postfix::pop()                                    //to remove the top element of stack
 {
     char ch;
     if(empty())
@@ -57,13 +59,13 @@ char infix_to_postfix::pop()
 }
 
 
-char infix_to_postfix::top_()
+char infix_to_postfix::top_()                                       //to return top element of stack
 {
     return stack[top];
 }
 
 
-int infix_to_postfix::priority(char c)
+int infix_to_postfix::priority(char c)                           //to check for the priority of operator
 {
     if(c=='+' || c=='-')
     return 1;
@@ -74,7 +76,7 @@ int infix_to_postfix::priority(char c)
 }
 
 
-bool infix_to_postfix::precedence(char c1, char c2)
+bool infix_to_postfix::precedence(char c1, char c2)                 //to check for the precedence of operator
 {
     if(priority(c1)>=priority(c2))
     return true;
@@ -83,7 +85,7 @@ bool infix_to_postfix::precedence(char c1, char c2)
 }
 
 
-bool infix_to_postfix::empty()
+bool infix_to_postfix::empty()                                  //to check if stack is empty or no
 {
     if(top== -1)
     return true;
@@ -91,7 +93,7 @@ bool infix_to_postfix::empty()
     return false;
 }
 
-string infix_to_postfix::convert(string infix)
+string infix_to_postfix::convert(string infix)                              //function to convert from infix to postfix
 {
     string postfix = "";
     int i=0;
@@ -121,10 +123,9 @@ int main()
     infix_to_postfix obj;
     string postfix="", infix;
     cout<<"Enter Infix Expression"<<endl;
-    cin>>infix;
+    cin>>infix;                                                         //To input infix Expressionfrom user
     int i=0;
     string ans=obj.convert(infix);
     cout<<ans<<endl;
     return 0;
 }
-
