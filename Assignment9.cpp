@@ -5,6 +5,13 @@ Write C++ program for simulating job queue. Write functions to add job and delet
 */
 
 
+/*
+Queues are frequently used in computer programming, and a typical example is the creation of a job queue by an operating system.
+If the operating system does not use priorities, then the jobs are processed in the order they enter the system.
+Write C++ program for simulating job queue. Write functions to add job and delete job from queue.
+*/
+
+
 #include <iostream>
 using namespace std;
 
@@ -25,7 +32,8 @@ class Priority_Queue{
 	}
 };
 
-void Priority_Queue :: insert_job(int job, int time){
+void Priority_Queue :: insert_job(int job, int time)                    //Function to insert an element in the priority queue
+{
 	Node *q, *temp = new Node();
 	temp->job = job;
 	temp->time = time;
@@ -43,7 +51,8 @@ void Priority_Queue :: insert_job(int job, int time){
 	}
 }
 
-void Priority_Queue :: delete_job(){
+void Priority_Queue :: delete_job()                                             //Function to delete element from priority queue
+{
 	Node *temp;
 	if(front == NULL){
 		cout<<"\nQueue Underflow!\n";
@@ -56,7 +65,8 @@ void Priority_Queue :: delete_job(){
 	}
 }
 
-void Priority_Queue :: display(){
+void Priority_Queue :: display()                                        //Function to display elements of Priority Queue
+{
 	Node *temp = front;
 	if(temp == NULL){
 		cout<<"\nQueue Is Empty!\n";
