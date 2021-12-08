@@ -12,7 +12,6 @@ class strfunc
 {
     public:
     string str="";
-    // string ans="";
     int a,b;
     char c;
     void getstring();
@@ -22,13 +21,13 @@ class strfunc
     void palindrome();
 };
 
-void strfunc::getstring()
+void strfunc::getstring()                                                   //function to input string from the user
 {
     cout<<"Enter String"<<endl;
     getline(cin,str);
 }
 
-void strfunc::frequency()
+void strfunc::frequency()                                                   //function to count the frequency of the Character
 {
     char c;
     cout<<"Enter Character to be searched"<<endl;
@@ -43,9 +42,7 @@ void strfunc::frequency()
     
 }
 
-
-
-void strfunc::deletes()
+void strfunc::deletes()                                                   //function to delete all characters between 2 indices
 {
     cout<<"Enter the indices between which Character have to be deleted"<<endl;
     cin>>a>>b;
@@ -63,9 +60,7 @@ void strfunc::deletes()
     cout<<"Updated String is "<<ans<<endl;
 }
 
-
-
-void strfunc::chardelete()
+void strfunc::chardelete()                                                   //function to delete a particular char
 {
     char c;
     cout<<"Enter Char to be deleted"<<endl;
@@ -87,7 +82,7 @@ void strfunc::chardelete()
     
 }
 
-void strfunc::palindrome()
+void strfunc::palindrome()                                                    //function to find the palindrome of a string
 {
     int left=0,right=str.size()-1;
     while(left!=right)
@@ -101,9 +96,8 @@ void strfunc::palindrome()
         right--;
     }
     cout<<"String is Palindrome"<<endl;
-    
-    
 }
+
 int main()
 {
     strfunc obj;
@@ -111,7 +105,7 @@ int main()
     char n;
     cout<<"Press 1 for Frequency"<<endl<<"Press 2 for Deleting using 2 indices"<<endl<<"Press 3 for Deleting using char"<<endl<<"Press 4 for checking for palindrome"<<endl;
     cin>>n;
-    switch(n)
+    switch(n)                                                   //Menu driven switch case to take the users choice
     {
         case '1':
         obj.frequency();
@@ -131,6 +125,5 @@ int main()
     }
     return 0;
 }
-
 
 
